@@ -36,12 +36,12 @@ export default function About() {
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-1 z-10">Archit</h3>
-              <p className="text-white/90 font-medium mb-6 z-10">Targeting CS / Software & AI</p>
+              <p className="text-white/90 font-medium mb-6 z-10">CS / Software & AI Enthusiast</p>
 
               <div className="w-full space-y-3 text-sm z-10">
                 <div className="flex items-center justify-between border-b border-white/20 pb-2">
                   <span className="text-white flex items-center gap-2"><MapPin size={16} /> Location</span>
-                  <span className="text-white font-medium">Global</span>
+                  <span className="text-white font-medium">Mumbai</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-white/20 pb-2">
                   <span className="text-white flex items-center gap-2"><Briefcase size={16} /> Status</span>

@@ -1,54 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
-
-const projectsData = [
-  {
-    title: 'E-Commerce Platform',
-    category: 'Full-Stack',
-    stack: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-    description: 'A full-scale e-commerce solution with payment integration, user authentication, and admin dashboard.',
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'AI Image Generator',
-    category: 'AI',
-    stack: ['Python', 'PyTorch', 'React', 'FastAPI'],
-    description: 'Generative AI application utilizing stable diffusion to create artwork from text prompts.',
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'Portfolio Website',
-    category: 'Web',
-    stack: ['React', 'Tailwind', 'Framer Motion'],
-    description: 'Minimalist, interactive personal portfolio website showcasing projects and skills.',
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'Stock Predictor Model',
-    category: 'AI',
-    stack: ['Python', 'Scikit-Learn', 'Pandas'],
-    description: 'Machine learning model predicting short-term stock trends using historical market data.',
-    github: '#',
-    demo: '#'
-  },
-];
+import { projectsData } from '../data/projects';
 
 const categories = ['All', 'Web', 'AI', 'Full-Stack'];
 
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const navigate = useNavigate();
 
   const filteredProjects = activeFilter === 'All' 
     ? projectsData 
     : projectsData.filter(p => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-24 px-6 w-full bg-white relative">
+    <section id="projects" className="py-24 px-6 w-full bg-background relative">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -130,9 +99,9 @@ export default function Projects() {
                       <a href={project.github} className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white/20 ${textClass} hover:bg-white/30 transition-colors text-sm font-bold`}>
                         <FaGithub size={16} /> Code
                       </a>
-                      <a href={project.demo} className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white ${bgClass.replace('bg-', 'text-')} hover:bg-gray-100 hover:shadow-md transition-all text-sm font-bold`}>
-                        <ExternalLink size={16} /> Demo
-                      </a>
+                      <button onClick={() => navigate(`/project/${project.id}`)} className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white ${bgClass.replace('bg-', 'text-')} hover:bg-gray-100 hover:shadow-md transition-all text-sm font-bold`}>
+                        <ExternalLink size={16} /> Details
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -26,7 +26,7 @@ export default function Skills() {
     : skillsData.filter(s => s.category === activeFilter);
 
   return (
-    <section id="skills" className="py-24 px-6 w-full bg-background relative overflow-hidden">
+    <section id="skills" className="py-24 px-6 w-full bg-white relative overflow-hidden">
       <div className="absolute top-[20%] right-[-5%] w-80 h-80 bg-google-red/10 rounded-full mix-blend-multiply filter blur-3xl pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-5%] w-80 h-80 bg-google-yellow/10 rounded-full mix-blend-multiply filter blur-3xl pointer-events-none" />
       
