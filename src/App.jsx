@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import CursorGlow from './components/CursorGlow'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -7,6 +8,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import ProjectDetails from './components/ProjectDetails'
 
 function App() {
   return (
@@ -14,12 +16,19 @@ function App() {
       <CursorGlow />
       <Navbar />
       <main className="w-full mx-auto flex flex-col items-center overflow-x-hidden">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Skills />
+              <Projects />
+              {/* <Experience /> */}
+              <About />
+              <Contact />
+            </>
+          } />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+        </Routes>
       </main>
       
       <footer className="w-full py-8 text-center text-sm text-primary-light bg-white border-t border-pastel-violet/50">
