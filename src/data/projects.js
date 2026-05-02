@@ -131,7 +131,7 @@ export const projectsData = [
     ],
     outcome: 'A comprehensive UI/UX design that transforms a frustrating offline process into a seamless digital experience.',
     github: '#',
-    demo: '#',
+    demo: 'https://www.figma.com/proto/WENYPsa8MudLWVVa2HWe35/HMI_EXPT1?node-id=1-2&t=P0RYGUMXpLi9kbzt-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2',
     videoUrl: ''
   }
 ];
