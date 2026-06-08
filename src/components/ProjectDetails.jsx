@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Volume2, VolumeX, CheckCircle2, Target, Sparkles } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaFigma } from 'react-icons/fa';
 import { projectsData } from '../data/projects';
 
 export default function ProjectDetails() {
@@ -67,7 +67,7 @@ export default function ProjectDetails() {
                         rel="noreferrer"
                         className="bg-google-blue text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#3367d6] transition-all shadow-lg hover:shadow-google-blue/40 whitespace-nowrap text-sm tracking-widest uppercase inline-flex items-center gap-3"
                       >
-                        <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
+                        <FaFigma size={16} />
                         View Prototype
                       </a>
                     ) : (
@@ -75,7 +75,7 @@ export default function ProjectDetails() {
                         className="bg-gray-100 border-4 border-gray-300 text-gray-400 px-8 py-3.5 rounded-full font-bold whitespace-nowrap text-sm tracking-widest uppercase inline-flex items-center gap-3 cursor-not-allowed"
                         title="Prototype Not Available"
                       >
-                        <span className="w-2.5 h-2.5 rounded-full bg-gray-400"></span>
+                        <FaFigma size={16} />
                         Prototype Not Available
                       </div>
                     )
@@ -239,6 +239,7 @@ export default function ProjectDetails() {
                           rel="noreferrer"
                           className="inline-flex items-center gap-4 bg-google-blue text-white px-10 py-5 rounded-full font-black text-lg hover:bg-[#3367d6] hover:scale-105 shadow-xl hover:shadow-google-blue/40 transition-all"
                         >
+                          <FaFigma size={20} />
                           View Prototype
                           <ArrowLeft className="w-6 h-6" style={{transform: 'rotate(135deg)'}} />
                         </a>
@@ -247,6 +248,7 @@ export default function ProjectDetails() {
                           className="inline-flex items-center gap-4 bg-gray-200 border-4 border-gray-300 text-gray-400 px-10 py-5 rounded-full font-black text-lg cursor-not-allowed shadow-none"
                           title="Prototype Not Available"
                         >
+                          <FaFigma size={20} />
                           Prototype Not Available
                           <ArrowLeft className="w-6 h-6 text-gray-400" style={{transform: 'rotate(135deg)'}} />
                         </div>
@@ -309,7 +311,7 @@ export default function ProjectDetails() {
                     rel="noreferrer"
                     className="bg-google-blue text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#3367d6] transition-all shadow-lg hover:shadow-google-blue/40 whitespace-nowrap text-sm tracking-widest uppercase inline-flex items-center gap-3"
                   >
-                    <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
+                    <FaFigma size={16} />
                     View Prototype
                   </a>
                 ) : (
@@ -317,7 +319,7 @@ export default function ProjectDetails() {
                     className="bg-gray-100 border-4 border-gray-300 text-gray-400 px-8 py-3.5 rounded-full font-bold whitespace-nowrap text-sm tracking-widest uppercase inline-flex items-center gap-3 cursor-not-allowed"
                     title="Prototype Not Available"
                   >
-                    <span className="w-2.5 h-2.5 rounded-full bg-gray-400"></span>
+                    <FaFigma size={16} />
                     Prototype Not Available
                   </div>
                 )

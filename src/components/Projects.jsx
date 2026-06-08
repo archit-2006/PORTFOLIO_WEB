@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaFigma } from 'react-icons/fa';
 import { projectsData } from '../data/projects';
 
 const categories = ['All', 'AI', 'Full-Stack', 'UI/UX'];
@@ -104,14 +104,14 @@ export default function Projects() {
                             rel="noreferrer" 
                             className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white/20 ${textClass} hover:bg-white/30 transition-colors text-sm font-bold`}
                           >
-                            <ExternalLink size={16} /> Prototype
+                            <FaFigma size={16} /> Prototype
                           </a>
                         ) : (
                           <div 
                             className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl ${textClass === 'text-white' ? 'bg-white/10 text-white/40' : 'bg-black/10 text-primary-dark/40'} cursor-not-allowed text-xs font-bold`} 
                             title="Prototype Not Available"
                           >
-                            <ExternalLink size={16} /> Not Available
+                            <FaFigma size={16} /> Not Available
                           </div>
                         )
                       ) : (
