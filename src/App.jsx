@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import CursorGlow from './components/CursorGlow'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -11,6 +11,14 @@ import Contact from './components/Contact'
 import ProjectDetails from './components/ProjectDetails'
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.hash]);
+
   return (
     <div className="bg-background min-h-screen relative selection:bg-pastel-blue selection:text-primary-dark font-sans text-primary-dark">
       <CursorGlow />
