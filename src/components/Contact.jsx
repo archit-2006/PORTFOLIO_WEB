@@ -45,7 +45,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="w-full md:w-2/3 bg-google-yellow hover:bg-[#e0a800] transition-colors duration-300 p-8 sm:p-10 rounded-[2.5rem] shadow-xl relative"
+            className="w-full md:w-2/3 bg-google-yellow hover:bg-[#e0a800] transition-colors duration-300 p-8 sm:p-10 rounded-[2.5rem] shadow-xl relative border-8 border-blue-300"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -106,7 +106,7 @@ export default function Contact() {
               <a 
                 key={idx}
                 href={social.href}
-                className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm border border-pastel-blue text-primary-light hover:text-red-500 hover:border-red-200 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300"
+                className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm border-[6px] border-blue-300 text-primary-light hover:text-red-500 hover:border-red-200 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300"
                 aria-label={social.label}
               >
                 {social.icon}

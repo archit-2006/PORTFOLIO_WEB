@@ -1,22 +1,26 @@
 export const projectsData = [
-  {
-    id: 'e-commerce-platform',
-    title: 'E-Commerce Platform',
-    category: 'Full-Stack',
-    stack: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-    description: 'A full-scale e-commerce solution with payment integration, user authentication, and admin dashboard.',
-    overview: 'This project is a comprehensive e-commerce platform designed to offer a seamless shopping experience for users, along with an intuitive dashboard for administrators. It handles everything from user registration to secure payment processing. By leveraging a robust tech stack, the platform ensures rapid load times and state-of-the-art security features.',
-    features: [
-      'User authentication and role-based authorization',
-      'Stripe payment gateway integration for seamless checkouts',
-      'Admin dashboard for real-time inventory and sales management',
-      'Advanced product filtering, search, and categorization'
-    ],
-    outcome: 'Successfully deployed a scalable platform capable of handling thousands of concurrent users, increasing conversion rates by 25% for the client compared to their legacy system.',
-    github: '#',
-    demo: '#',
-    videoUrl: ''
-  },
+  // {
+  //   id: 'e-commerce-platform',
+  //   title: 'E-Commerce Platform',
+  //   category: 'Full-Stack',
+  //   stack: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
+  //   description: 'A full-scale e-commerce solution with payment integration, user authentication, and admin dashboard.',
+  //   overview: 'This project is a comprehensive e-commerce platform designed to offer a seamless shopping experience for users, along with an intuitive dashboard for administrators. It handles everything from user registration to secure payment processing. By leveraging a robust tech stack, the platform ensures rapid load times and state-of-the-art security features.',
+  //   features: [
+  //     'User authentication and role-based authorization',
+  //     'Stripe payment gateway integration for seamless checkouts',
+  //     'Admin dashboard for real-time inventory and sales management',
+  //     'Advanced product filtering, search, and categorization'
+  //   ],
+  //   outcome: [
+  //     'Successfully deployed a scalable platform capable of handling thousands of concurrent users.',
+  //     'Increased conversion rates by 25% for the client compared to their legacy system.',
+  //     'Ensured secure and rapid transaction processing.'
+  //   ],
+  //   github: '#',
+  //   demo: '#',
+  //   videoUrl: ''
+  // },
   {
   id: 'online-judge',
   title: 'Online Judge System',
@@ -32,65 +36,81 @@ export const projectsData = [
     'Secure API routes with middleware and error handling',
     'Responsive UI for seamless cross-device experience'
   ],
-  outcome: 'Built a scalable and secure coding platform that efficiently handles multiple submissions, improves user engagement, and provides a smooth problem-solving workflow similar to modern competitive programming platforms.',
+  outcome: [
+    'Built a scalable and secure coding platform handling multiple concurrent submissions.',
+    'Significantly improved user engagement through instant feedback mechanisms.',
+    'Provided a seamless problem-solving workflow akin to modern competitive programming platforms.'
+  ],
   github: 'https://github.com/archit-2006/O_Jproj',
   demo: 'https://codingfarm.vercel.app/',
   videoUrl: 'https://www.loom.com/embed/468d46d00d9c43e0b30607eeefb3cb13'
 },
-  {
-    id: 'ai-image-generator',
-    title: 'AI Image Generator',
-    category: 'AI',
-    stack: ['Python', 'PyTorch', 'React', 'FastAPI'],
-    description: 'Generative AI application utilizing stable diffusion to create artwork from text prompts.',
-    overview: 'An accessible and fully-responsive front-end web interface built on top of robust deep learning pipelines. It allows users to intuitively generate high-quality images and artwork simply by typing descriptive text prompts, hiding the complexity of GPU processing behind a clean REST API.',
-    features: [
-      'Stable Diffusion model integration optimized for low-latency inference',
-      'Real-time image generation pipeline with progress indicators',
-      'Personal user gallery and history to save, download, and share artwork',
-      'Responsive, modern UI designed for both desktop and mobile platforms'
-    ],
-    outcome: 'The application garnered a user base of over 500 active creators in the first month following launch, successfully showcasing the seamless bridge between complex AI methodologies and user-friendly consumer web interfaces.',
-    github: '#',
-    demo: '#',
-    videoUrl: ''
-  },
-  {
-    id: 'portfolio-website',
-    title: 'Portfolio Website',
-    category: 'Web',
-    stack: ['React', 'Tailwind', 'Framer Motion'],
-    description: 'Minimalist, interactive personal portfolio website showcasing projects and skills.',
-    overview: 'My personal space on the internet designed to showcase my skills, featured projects, and professional background. Developed to be highly interactive, sleek, and strictly reflective of my capabilities and aesthetic taste as a front-end developer.',
-    features: [
-      'Custom 3D flap and hover layout animations using Framer Motion',
-      'Fully responsive, clean, and semantic design system',
-      'Vibrant Google-inspired color theme for maximum visual impact',
-      'Fast, modern client-side routing provided by React Router'
-    ],
-    outcome: 'Created a visually striking and technically robust portfolio that significantly elevated my professional online presence, optimized web vitals, and directly led to multiple high-profile freelance consulting inquiries.',
-    github: '#',
-    demo: '#',
-    videoUrl: ''
-  },
-  {
-    id: 'stock-predictor-model',
-    title: 'Stock Predictor Model',
-    category: 'AI',
-    stack: ['Python', 'Scikit-Learn', 'Pandas'],
-    description: 'Machine learning model predicting short-term stock trends using historical market data.',
-    overview: 'A rigorous data science and machine learning research project focused on forecasting stock market movements. Using complex and noisy historical market data streams, the model identifies subtle patterns to predict potential upward or downward trends to assist in quantitative trading decisions.',
-    features: [
-      'Comprehensive data cleaning and feature engineering pipelines',
-      'In-depth time-series analysis and scaling utilizing Pandas',
-      'Ensemble models including Random Forest and SVM prediction algorithms',
-      'Automated historical backtesting framework for verifying profitability'
-    ],
-    outcome: 'Achieved a predictive accuracy of 62% in controlled historical backtesting scenarios, proving the significant statistical viability of algorithmic assistance in short-term volatility trading strategies without overfitting.',
-    github: '#',
-    demo: '#',
-    videoUrl: ''
-  },
+  // {
+  //   id: 'ai-image-generator',
+  //   title: 'AI Image Generator',
+  //   category: 'AI',
+  //   stack: ['Python', 'PyTorch', 'React', 'FastAPI'],
+  //   description: 'Generative AI application utilizing stable diffusion to create artwork from text prompts.',
+  //   overview: 'An accessible and fully-responsive front-end web interface built on top of robust deep learning pipelines. It allows users to intuitively generate high-quality images and artwork simply by typing descriptive text prompts, hiding the complexity of GPU processing behind a clean REST API.',
+  //   features: [
+  //     'Stable Diffusion model integration optimized for low-latency inference',
+  //     'Real-time image generation pipeline with progress indicators',
+  //     'Personal user gallery and history to save, download, and share artwork',
+  //     'Responsive, modern UI designed for both desktop and mobile platforms'
+  //   ],
+  //   outcome: [
+  //     'Garnered a user base of over 500 active creators in the first month following launch.',
+  //     'Successfully showcased the seamless bridge between complex AI methodologies and user-friendly web interfaces.',
+  //     'Delivered high-quality, low-latency image generations.'
+  //   ],
+  //   github: '#',
+  //   demo: '#',
+  //   videoUrl: ''
+  // },
+  // {
+  //   id: 'portfolio-website',
+  //   title: 'Portfolio Website',
+  //   category: 'Web',
+  //   stack: ['React', 'Tailwind', 'Framer Motion'],
+  //   description: 'Minimalist, interactive personal portfolio website showcasing projects and skills.',
+  //   overview: 'My personal space on the internet designed to showcase my skills, featured projects, and professional background. Developed to be highly interactive, sleek, and strictly reflective of my capabilities and aesthetic taste as a front-end developer.',
+  //   features: [
+  //     'Custom 3D flap and hover layout animations using Framer Motion',
+  //     'Fully responsive, clean, and semantic design system',
+  //     'Vibrant Google-inspired color theme for maximum visual impact',
+  //     'Fast, modern client-side routing provided by React Router'
+  //   ],
+  //   outcome: [
+  //     'Created a visually striking and technically robust portfolio elevating professional online presence.',
+  //     'Optimized web vitals leading to incredibly fast load times.',
+  //     'Directly generated multiple high-profile freelance consulting inquiries.'
+  //   ],
+  //   github: '#',
+  //   demo: '#',
+  //   videoUrl: ''
+  // },
+  // {
+  //   id: 'stock-predictor-model',
+  //   title: 'Stock Predictor Model',
+  //   category: 'AI',
+  //   stack: ['Python', 'Scikit-Learn', 'Pandas'],
+  //   description: 'Machine learning model predicting short-term stock trends using historical market data.',
+  //   overview: 'A rigorous data science and machine learning research project focused on forecasting stock market movements. Using complex and noisy historical market data streams, the model identifies subtle patterns to predict potential upward or downward trends to assist in quantitative trading decisions.',
+  //   features: [
+  //     'Comprehensive data cleaning and feature engineering pipelines',
+  //     'In-depth time-series analysis and scaling utilizing Pandas',
+  //     'Ensemble models including Random Forest and SVM prediction algorithms',
+  //     'Automated historical backtesting framework for verifying profitability'
+  //   ],
+  //   outcome: [
+  //     'Achieved a predictive accuracy of 62% in controlled historical backtesting scenarios.',
+  //     'Proved the significant statistical viability of algorithmic assistance in short-term volatility trading.',
+  //     'Successfully prevented overfitting while maintaining robust prediction metrics.'
+  //   ],
+  //   github: '#',
+  //   demo: '#',
+  //   videoUrl: ''
+  // },
   {
     id: 'railway-concession-app',
     title: 'Railway Concession App',
@@ -129,10 +149,35 @@ export const projectsData = [
       'Automated renewal reminders',
       'Mobile-first intuitive interface'
     ],
-    outcome: 'A comprehensive UI/UX design that transforms a frustrating offline process into a seamless digital experience.',
+    outcome: [
+      'Transformed a frustrating offline process into a seamless digital experience.',
+      'Designed a highly intuitive mobile-first interface for students.',
+      'Streamlined document verification and status tracking.'
+    ],
     github: '#',
     demo: 'https://www.figma.com/proto/WENYPsa8MudLWVVa2HWe35/HMI_EXPT1?node-id=1-2&t=P0RYGUMXpLi9kbzt-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2',
     videoUrl: ''
+  },
+  {
+    id: 'pca-eigenface-recognition-system',
+    title: 'PCA Eigenface Face Recognition System',
+    category: 'AI',
+    stack: ['React', 'Vite', 'FastAPI', 'Python', 'NumPy', 'Pillow'],
+    description: 'A full-stack face recognition web application implementing PCA mathematical models from scratch using NumPy and React.',
+    overview: 'This project is a full-stack web application that implements the PCA (Principal Component Analysis) Eigenface facial extraction algorithm based on the academic study by Erwin et al. Built without high-level machine learning frameworks like scikit-learn, the FastAPI backend computes all core equations (mean face computation, mean subtraction, compact covariance matrix trick, and eigenvector decomposition) using pure NumPy. The interactive UI, powered by React and Vite, addresses the need for educational visualization of principal components, enabling users to manage datasets, perform real-time recognition, and view computed eigenfaces and eigenvalue magnitudes.',
+    features: [
+      'Academic Equation Implementation: Implements all four core equations from the paper including mean face computation (Ψ = (1/M) Σ Γi), mean subtraction, and eigenvector decomposition.',
+      'Interactive Dataset Management: A custom dashboard to upload labeled face images, track dataset status, and clear active data in-memory.',
+      'Real-Time Face Recognition: Processes query images and computes matches using minimum Euclidean distance in the PCA-projected space.',
+      'Eigenface Visualization: Reconstructs mathematical eigenvectors back into 100x100 grayscale images to visually render the top-k eigenfaces and mean face on the frontend.'
+    ],
+    outcome: [
+      'Successfully replicated baseline academic paper results, achieving an accuracy of 0.595, precision of 0.630, and recall of 0.598.',
+      'Optimized matrix processing time using the compact covariance matrix trick (M×M instead of D×D) to allow CPU-efficient training.'
+    ],
+    github: 'https://github.com/archit-2006/PCA_Face_Recognition_System',
+    demo: '#',
+    videoUrl: 'https://res.cloudinary.com/dmwcbtuan/video/upload/v1780849577/2026-06-07_21-43-13_dkhmm9.mp4'
   }
 ];
 

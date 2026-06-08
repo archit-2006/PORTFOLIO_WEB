@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Briefcase, GraduationCap } from 'lucide-react';
 
 export default function About() {
   return (
@@ -29,27 +29,25 @@ export default function About() {
             className="md:col-span-5 lg:col-span-4"
           >
             <div className="bg-google-red hover:bg-[#d33a2e] transition-colors duration-300 rounded-3xl p-8 shadow-lg flex flex-col items-center text-center relative overflow-hidden group">
-              <div className="absolute top-0 w-full h-32 bg-white/10" />
-              
-              <div className="w-40 h-40 rounded-full border-4 border-white shadow-md z-10 overflow-hidden bg-white flex items-center justify-center mb-6 mt-6">
-                <span className="text-6xl text-google-red font-bold">A.</span>
-              </div>
-              
-              <h3 className="text-2xl font-bold text-white mb-1 z-10">Archit</h3>
-              <p className="text-white/90 font-medium mb-6 z-10">CS / Software & AI Enthusiast</p>
+              <h3 className="text-3xl font-black text-white mb-2 z-10 mt-4">Archit</h3>
+              <p className="text-white/80 font-semibold mb-8 z-10 text-base">CS / Software & AI Enthusiast</p>
 
-              <div className="w-full space-y-3 text-sm z-10">
-                <div className="flex items-center justify-between border-b border-white/20 pb-2">
-                  <span className="text-white flex items-center gap-2"><MapPin size={16} /> Location</span>
-                  <span className="text-white font-medium">Mumbai</span>
+              <div className="w-full space-y-4 text-sm z-10">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                  <span className="text-white flex items-center gap-2 font-medium"><GraduationCap size={18} /> Education</span>
+                  <span className="text-white font-semibold">BTech CSE</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/20 pb-2">
-                  <span className="text-white flex items-center gap-2"><Briefcase size={16} /> Status</span>
-                  <span className="text-emerald-300 font-medium">Available</span>
+                <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                  <span className="text-white flex items-center gap-2 font-medium"><MapPin size={18} /> Location</span>
+                  <span className="text-white font-semibold">Mumbai</span>
                 </div>
-                <div className="flex items-center justify-between pb-2">
-                  <span className="text-white flex items-center gap-2"><Mail size={16} /> Email</span>
-                  <a href="#contact" className="text-white font-bold hover:text-gray-200 transition-colors">Contact</a>
+                <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                  <span className="text-white flex items-center gap-2 font-medium"><Briefcase size={18} /> Status</span>
+                  <span className="text-emerald-300 font-semibold">Available</span>
+                </div>
+                <div className="flex items-center justify-between pb-1">
+                  <span className="text-white flex items-center gap-2 font-medium"><Mail size={18} /> Contact</span>
+                  <a href="#contact" className="px-4 py-1.5 bg-white text-google-red font-bold rounded-full hover:bg-gray-100 transition-colors shadow-sm">Get in touch</a>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { projectsData } from '../data/projects';
 
-const categories = ['All', 'Web', 'AI', 'Full-Stack'];
+const categories = ['All', 'AI', 'Full-Stack', 'UI/UX'];
 
 
 export default function Projects() {
@@ -71,7 +71,7 @@ export default function Projects() {
                 <div className={`relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-3xl shadow-lg`}>
                   
                   {/* Front Side */}
-                  <div className={`absolute w-full h-full p-8 ${bgClass} rounded-3xl [backface-visibility:hidden] flex flex-col items-center justify-center text-center border border-transparent`}>
+                  <div className={`absolute w-full h-full p-8 ${bgClass} rounded-3xl [backface-visibility:hidden] flex flex-col items-center justify-center text-center border-8 border-blue-300`}>
                     <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-sm border border-white/30 bg-white/20`}>
                       <span className={`text-2xl font-bold ${textClass}`}>{project.title.charAt(0)}</span>
                     </div>
@@ -87,7 +87,7 @@ export default function Projects() {
                   </div>
 
                   {/* Back Side */}
-                  <div className={`absolute w-full h-full p-8 ${backBgClass} rounded-3xl [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between shadow-xl border border-transparent`}>
+                  <div className={`absolute w-full h-full p-8 ${backBgClass} rounded-3xl [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between shadow-xl border-8 border-blue-300`}>
                     <div>
                       <h3 className={`text-xl font-bold ${textClass} mb-3`}>{project.title}</h3>
                       <p className={`text-sm ${textClass === 'text-white' ? 'text-white/90' : 'text-primary-dark/90'} leading-relaxed`}>
@@ -96,9 +96,41 @@ export default function Projects() {
                     </div>
                     
                     <div className="flex gap-4 mt-6">
-                      <a href={project.github} className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white/20 ${textClass} hover:bg-white/30 transition-colors text-sm font-bold`}>
-                        <FaGithub size={16} /> Code
-                      </a>
+                      {project.category === 'UI/UX' ? (
+                        project.demo && project.demo !== '#' ? (
+                          <a 
+                            href={project.demo} 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white/20 ${textClass} hover:bg-white/30 transition-colors text-sm font-bold`}
+                          >
+                            <ExternalLink size={16} /> Prototype
+                          </a>
+                        ) : (
+                          <div 
+                            className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl ${textClass === 'text-white' ? 'bg-white/10 text-white/40' : 'bg-black/10 text-primary-dark/40'} cursor-not-allowed text-xs font-bold`} 
+                            title="Prototype Not Available"
+                          >
+                            <ExternalLink size={16} /> Not Available
+                          </div>
+                        )
+                      ) : (
+                        project.github && project.github !== '#' ? (
+                          <a 
+                            href={project.github} 
+                            className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white/20 ${textClass} hover:bg-white/30 transition-colors text-sm font-bold`}
+                          >
+                            <FaGithub size={16} /> Code
+                          </a>
+                        ) : (
+                          <div 
+                            className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl ${textClass === 'text-white' ? 'bg-white/10 text-white/40' : 'bg-black/10 text-primary-dark/40'} cursor-not-allowed text-xs font-bold`} 
+                            title="Source Code Not Available"
+                          >
+                            <FaGithub size={16} /> Not Available
+                          </div>
+                        )
+                      )}
                       <button onClick={() => navigate(`/project/${project.id}`)} className={`flex-1 flex justify-center items-center gap-2 py-2.5 rounded-xl bg-white ${bgClass.replace('bg-', 'text-')} hover:bg-gray-100 hover:shadow-md transition-all text-sm font-bold`}>
                         <ExternalLink size={16} /> Details
                       </button>

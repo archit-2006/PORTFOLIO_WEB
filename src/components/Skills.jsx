@@ -88,7 +88,7 @@ export default function Skills() {
                     delay: index * 0.1
                   }
                 }}
-                className={`group relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-full cursor-pointer ${bgClass} shadow-md ${hoverBgClass} hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+                className={`group relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-full cursor-pointer ${bgClass} shadow-md ${hoverBgClass} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-8 border-blue-300`}
               >
                 <div className="text-center z-10 p-2">
                   <span className={`block ${textClass} font-bold text-sm sm:text-base transition-transform group-hover:-translate-y-2`}>
